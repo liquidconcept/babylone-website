@@ -1,0 +1,81 @@
+@import "compass/css3/border-radius";
+
+body {
+  background-size: 100%;
+  margin:0;
+  padding:0;
+  background: url('Tour_Babel.jpg') no-repeat center fixed;
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  font-family: arial;
+}
+
+.city {
+  float: left;
+  width: 223px;
+}
+
+.address {
+  float: right;
+  width: 200px;
+  text-align: right;
+}
+
+.both {
+  clear: both;
+}
+
+#main {
+  margin: 0 auto;
+  width: 1050px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 98px;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 130px;
+}
+
+h2 {
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+h3 {
+  color: #525252;
+  font-size: 30px;
+}
+
+p {
+  text-align: center;
+  color: white;
+}
+
+button {
+  margin-left: 340px;
+  @include border-radius(5px);
+  border-width: 0;
+  background-color: #ffe659;
+  color: #525252;
+  font-size: 28px;
+  font-weight: bold;
+  font-style: normal;
+  font-family: Arial;
+  text-align: center;
+  width: 350px;
+  height: 70px;
+  background-image: linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
+  background-image: -o-linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
+  background-image: -moz-linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
+  background-image: -webkit-linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
+  background-image: -ms-linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
+}
