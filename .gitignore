@@ -1,0 +1,5 @@
+.sass-cache/
+tmp/
+public/
+log/
+crash.log
