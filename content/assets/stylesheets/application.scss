@@ -9,7 +9,7 @@ body {
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
   background-size: cover; /* version standardisée */
-  font-family: arial;
+  font-family: 'Viga', Arial, sans-serif;
 }
 
 .city {
@@ -19,7 +19,7 @@ body {
 
 .address {
   float: right;
-  width: 200px;
+  width: 240px;
   text-align: right;
 }
 
