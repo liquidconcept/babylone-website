@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="<%= stylesheet_path 'application' %>" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Viga&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="<%= javascript_path 'application' %>"></script>
+  </head>
+  <body>
+    <!-- blanck -->
+    <div id="main">
+      <header>
+        <article>
+          <%= content_for(item, :articleBox) %>
+        </article>
+      </header>
+      <nav>
+        <ul>
+          <li class="first"><a href="../index.html">Accueil</a></li>
+          <li class="second"><a href="/colloque/vidy.html">Colloque Vidy</a></li>
+          <li class="third"><a href="/colloque/paris.html">Séminiare Paris</a></li>
+          <li class="fourth"><a href="/colloque/nant.html">Séminaire Nant</a></li>
+        </ul>
+      </nav>
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
