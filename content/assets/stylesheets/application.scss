@@ -1,6 +1,32 @@
+@import "compass/reset";
 @import "compass/css3/border-radius";
+@import "bootstrap";
+
+/*----------------------------------------*/
+/*                COLORS                  */
+/*----------------------------------------*/
+
+$grey: #525252;
+$white: #FFFFFF;
+$yellow: #ffc04a;
+
+/*----------------------------------------*/
+/*                DEFAULT                 */
+/*----------------------------------------*/
 
 body {
+  background-size: 100%;
+  margin:0;
+  padding:0;
+  font-family: 'Viga', Arial, sans-serif;
+}
+
+.line {
+  margin: 30px 0px;
+}
+
+#background_image {
+  height: 1000px;
   background-size: 100%;
   margin:0;
   padding:0;
@@ -9,18 +35,36 @@ body {
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
   background-size: cover; /* version standardisée */
-  font-family: 'Viga', Arial, sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.yellow {
+  color: $yellow;
 }
 
 .city {
   float: left;
   width: 223px;
+  margin-top: 50px;
+}
+
+#content {
+  width: 960px;
+  margin-top: 0px;
+}
+
+.home {
+  margin-top: 55px;
 }
 
 .address {
   float: right;
   width: 292px;
   text-align: right;
+  margin-top: 50px;
 }
 
 .both {
@@ -29,7 +73,7 @@ body {
 
 #main {
   margin: 0 auto;
-  width: 1050px;
+  width: 960px;
 }
 
 h1 {
@@ -51,21 +95,26 @@ h2 {
 }
 
 h3 {
-  color: #525252;
+  color: $grey;
   font-size: 30px;
 }
 
 p {
-  text-align: center;
-  color: white;
+  /*text-align: center;*/
+  color: $grey;
+}
+
+.delay {
+  padding-top: 20px;
 }
 
 button {
-  margin-left: 340px;
+  margin-left: 300px;
+  cursor: pointer;
   @include border-radius(5px);
   border-width: 0;
   background-color: #ffe659;
-  color: #525252;
+  color: $grey;
   font-size: 28px;
   font-weight: bold;
   font-style: normal;
@@ -79,3 +128,325 @@ button {
   background-image: -webkit-linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
   background-image: -ms-linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
 }
+
+/*----------------------------------------*/
+/*                  NAV                   */
+/*----------------------------------------*/
+
+nav {
+  width: 100%;
+  height: 55px;
+  background-color: $grey;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  ul{
+    width: 960px;
+    margin: 20px auto;
+    clear: both;
+
+    .first {
+      float: left;
+    }
+
+    .second {
+      margin-left: 20%;
+    }
+
+    .third {
+      margin-left: 20%;
+    }
+
+    .fourth {
+      float: right;
+    }
+
+    li {
+      display: inline;
+
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/*----------------------------------------*/
+/*                 HOME                   */
+/*----------------------------------------*/
+
+section.home {
+  .delay {
+    color: $white;
+    margin-left: 360px;
+  }
+}
+
+/*----------------------------------------*/
+/*                 VIDY                   */
+/*----------------------------------------*/
+
+article#vidy {
+  header{
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    width: 100%;
+    height: 250px;
+    background-size: 100%;
+    margin:0;
+    padding:0;
+    background: asset-url('tour_babel.jpg') no-repeat center fixed;
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+
+    h1 {
+      margin-top: 80px;
+      font-size: 70px;
+    }
+
+    h2 {
+      font-size: 50px;
+    }
+  }
+
+  section#registration {
+    width: 960px;
+    margin-top: 305px;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    button {
+      margin: 35px 0px 0px 60px;
+    }
+
+    .delay {
+      color: $grey;
+      margin-left: 120px;
+    }
+  }
+
+  section#content {
+    margin-top: 30px;
+
+    .quote {
+      font-size: 25px;
+      margin-bottom: 70px;
+
+      .author {
+        float: right;
+        font-size: 15px;
+        color: #ffc04a;
+      }
+    }
+
+    .inscription {
+      margin-bottom: 20px;
+
+      .price {
+        float: right;
+      }
+    }
+
+    .text {
+      line-height: 1.3em;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+
+  section#people {
+    height: 250px;
+    margin-top: 30px;
+
+    h4 {
+      font-size: 20px;
+      color: $grey;
+      margin: 10px 0px;
+    }
+
+   p {
+      line-height: 1.3em;
+    }
+  }
+}
+
+/*----------------------------------------*/
+/*                 PARIS                  */
+/*----------------------------------------*/
+
+article#paris {
+  header{
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    width: 100%;
+    height: 250px;
+    background-size: 100%;
+    margin:0;
+    padding:0;
+    background: asset-url('paris.jpg') no-repeat center fixed;
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+
+    h1 {
+      margin-top: 80px;
+      font-size: 70px;
+    }
+
+    h2 {
+      font-size: 50px;
+    }
+  }
+
+  section#registration {
+    width: 960px;
+    margin-top: 305px;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    button {
+      margin: 35px 0px 0px 60px;
+    }
+
+    .delay {
+      color: $grey;
+      margin-left: 75px;
+    }
+  }
+
+  button {
+    color: white;
+    cursor: pointer;
+    @include border-radius(5px);
+    background-color: #EE372D;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-family: Arial;
+    text-align: center;
+    width: 350px;
+    height: 70px;
+    background-image: linear-gradient(bottom, #FF4034 0%, #E8342B 100%);
+    background-image: -o-linear-gradient(bottom, #FF4034 0%, #E8342B 100%);
+    background-image: -moz-linear-gradient(bottom, #FF4034 0%, #E8342B 100%);
+    background-image: -webkit-linear-gradient(bottom, #FF4034 0%, #E8342B 100%);
+    background-image: -ms-linear-gradient(bottom, #FF4034 0%, #E8342B 100%);
+  }
+}
+
+/*----------------------------------------*/
+/*                  NANT                  */
+/*----------------------------------------*/
+
+article#nant {
+  header{
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    width: 100%;
+    height: 250px;
+    background-size: 100%;
+    margin:0;
+    padding:0;
+    background: asset-url('nant.jpg') no-repeat center fixed;
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+
+    h1 {
+      margin-top: 80px;
+      font-size: 70px;
+    }
+
+    h2 {
+      font-size: 50px;
+    }
+  }
+
+  section#registration {
+    width: 960px;
+    margin-top: 305px;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    button {
+      margin: 35px 0px 0px 60px;
+    }
+
+    .delay {
+      font-size: 13px;
+      text-align: center;
+      color: $grey;
+      margin-left: 90px;
+    }
+  }
+
+  section#content {
+    margin-top: 30px;
+
+    h4 {
+      font-size: 20px;
+      color: $grey;
+      margin: 10px 0px;
+    }
+
+    .text {
+      line-height: 1.3em;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+
+  section#people {
+    height: 200px;
+    margin-top: 30px;
+
+    h4 {
+      font-size: 20px;
+      color: $grey;
+      margin: 10px 0px;
+    }
+
+    p {
+      line-height: 1.3em;
+    }
+  }
+
+  button {
+    color: white;
+    cursor: pointer;
+    @include border-radius(5px);
+    background-color: #35640E;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-family: Arial;
+    text-align: center;
+    width: 350px;
+    height: 70px;
+    background-image: linear-gradient(bottom, #35640E 0%, #2C510C 100%);
+    background-image: -o-linear-gradient(bottom, #35640E 0%, #2C510C 100%);
+    background-image: -moz-linear-gradient(bottom, #35640E 0%, #2C510C 100%);
+    background-image: -webkit-linear-gradient(bottom, #35640E 0%, #2C510C 100%);
+    background-image: -ms-linear-gradient(bottom, #35640E 0%, #2C510C 100%);
+  }
+}
+

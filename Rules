@@ -19,6 +19,11 @@ compile %r{/assets/(stylesheets|javascripts)/.+/}, :rep => :gzip do
   filter :gzip
 end
 
+compile '/colloque/*/' do
+  filter :erb
+  layout 'colloque'
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items

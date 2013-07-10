@@ -8,14 +8,25 @@
     <script src="<%= javascript_path 'application' %>"></script>
   </head>
   <body>
-    <div id="main">
-      <header>
-        <article>
-          <%= content_for(item, :articleBox) %>
-        </article>
-      </header>
-      <div id="content">
-        <%= yield %>
+    <!-- default -->
+    <div id="background_image">
+      <div id="main">
+        <header>
+          <article>
+            <%= content_for(item, :articleBox) %>
+          </article>
+        </header>
+        <nav>
+          <ul>
+            <li class="first"><a href="../index.html">Accueil</a></li>
+            <li class="second"><a href="./colloque/vidy.html">Colloque Vidy</a></li>
+            <li class="third"><a href="./colloque/paris.html">Séminiare Paris</a></li>
+            <li class="fourth"><a href="./colloque/nant.html">Séminaire Nant</a></li>
+          </ul>
+        </nav>
+        <div id="content">
+          <%= yield %>
+        </div>
       </div>
     </div>
   </body>
