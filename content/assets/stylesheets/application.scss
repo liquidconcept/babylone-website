@@ -272,7 +272,7 @@ article#vidy {
   }
 
   section#people {
-    height: 250px;
+    height: 320px;
     margin-top: 30px;
 
     h4 {
@@ -283,6 +283,14 @@ article#vidy {
 
    p {
       line-height: 1.3em;
+    }
+
+    p.last_left {
+      margin-bottom: 50px;
+    }
+
+    p.last_right {
+      margin-bottom: 50px;
     }
   }
 }
