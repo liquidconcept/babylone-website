@@ -5,11 +5,17 @@
     <title></title>
     <link rel="stylesheet" href="<%= stylesheet_path 'application' %>" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Viga&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" href="<%= stylesheet_path 'ie8' %>" media="screen">
+    <![endif]-->
     <script src="<%= javascript_path 'application' %>"></script>
   </head>
   <body>
     <!-- default -->
     <div id="background_image">
+      <!--[if lt IE 9]>
+        <img src="/assets/tour_babel.jpg" id="bg">
+      <![endif]-->
       <div id="main">
         <header>
           <article>
@@ -20,7 +26,7 @@
           <ul>
             <li class="first"><a href="../index.html">Accueil</a></li>
             <li class="second"><a href="./colloque/vidy.html">Colloque Vidy</a></li>
-            <li class="third"><a href="./colloque/paris.html">Séminiare Paris</a></li>
+            <li class="third"><a href="./colloque/paris.html">Séminaire Paris</a></li>
             <li class="fourth"><a href="./colloque/nant.html">Séminaire Nant</a></li>
           </ul>
         </nav>
