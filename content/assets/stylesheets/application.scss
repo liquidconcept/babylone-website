@@ -108,8 +108,12 @@ p {
   padding-top: 20px;
 }
 
-button {
-  margin-left: 300px;
+a {
+  text-decoration: none;
+}
+
+.button {
+  margin: 20px 0px 0px 300px;
   cursor: pointer;
   @include border-radius(5px);
   border-width: 0;
@@ -120,8 +124,9 @@ button {
   font-style: normal;
   font-family: Arial;
   text-align: center;
+  padding-top: 15px;
   width: 350px;
-  height: 70px;
+  height: 40px;
   background-image: linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
   background-image: -o-linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
   background-image: -moz-linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
@@ -226,14 +231,36 @@ article#vidy {
       font-size: 20px;
     }
 
-    button {
-      margin: 35px 0px 0px 60px;
-    }
-
     .delay {
       color: $grey;
       margin-left: 120px;
     }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .button {
+    margin: 40px 0px 0px 60px;
+    cursor: pointer;
+    @include border-radius(5px);
+    border-width: 0;
+    background-color: #ffe659;
+    color: $grey;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-family: Arial;
+    text-align: center;
+    padding-top: 15px;
+    width: 350px;
+    height: 40px;
+    background-image: linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
+    background-image: -o-linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
+    background-image: -moz-linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
+    background-image: -webkit-linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
+    background-image: -ms-linear-gradient(bottom, #ffc04a 0%, #ffe659 100%);
   }
 
   section#content {
@@ -343,7 +370,12 @@ article#paris {
     }
   }
 
-  button {
+  a {
+    text-decoration: none;
+  }
+
+  .button {
+    margin: 40px 0px 0px 60px;
     color: white;
     cursor: pointer;
     @include border-radius(5px);
@@ -354,7 +386,8 @@ article#paris {
     font-family: Arial;
     text-align: center;
     width: 350px;
-    height: 70px;
+    height: 40px;
+    padding-top: 15px;
     background-image: linear-gradient(bottom, #FF4034 0%, #E8342B 100%);
     background-image: -o-linear-gradient(bottom, #FF4034 0%, #E8342B 100%);
     background-image: -moz-linear-gradient(bottom, #FF4034 0%, #E8342B 100%);
@@ -444,7 +477,12 @@ article#nant {
     }
   }
 
-  button {
+  a {
+    text-decoration: none;
+  }
+
+  .button {
+    margin: 40px 0px 0px 60px;
     color: white;
     cursor: pointer;
     @include border-radius(5px);
@@ -455,7 +493,8 @@ article#nant {
     font-family: Arial;
     text-align: center;
     width: 350px;
-    height: 70px;
+    height: 40px;
+    padding-top: 15px;
     background-image: linear-gradient(bottom, #35640E 0%, #2C510C 100%);
     background-image: -o-linear-gradient(bottom, #35640E 0%, #2C510C 100%);
     background-image: -moz-linear-gradient(bottom, #35640E 0%, #2C510C 100%);

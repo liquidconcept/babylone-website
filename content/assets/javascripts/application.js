@@ -1,20 +1,18 @@
 // =require modernizr
 // =require jquery
 
-$(function() {
-
-  // Agreement condition lightbox
-  $('#lightbox').hide();
-
-  $('.lightbox_link').on('click', function(event) {
-    event.preventDefault();
-
-    $('#lightbox').fadeIn('slow');
-  });
-
-  $('#close').on('click', function(event) {
-    event.preventDefault();
-
-    $('#lightbox').fadeOut('slow');
-  });
+$(window).load(function() {    
+  var theWindow        = $(window),
+      $bg              = $("#bg"),
+      aspectRatio      = $bg.width() / $bg.height();
+                    
+  function resizeBg() { 
+    if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
+        $bg.removeClass().addClass('bgheight');
+    } else {
+        $bg.removeClass().addClass('bgwidth');
+    }
+  }                     
+  
+  theWindow.resize(resizeBg).trigger("resize");
 });
